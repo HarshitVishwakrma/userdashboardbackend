@@ -12,13 +12,15 @@ import cookieParser from "cookie-parser";
 const app = express();
 // Use cors middleware
 
-app.use(
-  cors({
-    origin: "https://userdashboard-theta.vercel.app", // Frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    credentials: true, // Allow cookies if needed
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://userdashboard-theta.vercel.app", // Frontend URL
+//     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+//     credentials: true, // Allow cookies if needed
+//   })
+// );
+
+app.use(cors())
 
 //middle wares
 app.use(express.json());
