@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 dotenv.config();
-// const mongoUri = process.env.MONGO_URI;
-const mongoUri = 'mongodb+srv://harshitvishwakarma007:HarshitWithNoSpecialCharacter@cluster1.22i9t1u.mongodb.net/userdashboard';
+const mongoUri = process.env.MONGO_URI;
+
 
 if (!mongoUri) {
   console.error("MongoDB URI not defined in environment variables");
