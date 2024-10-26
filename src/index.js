@@ -14,9 +14,9 @@ const app = express();
 
 app.use(
   cors({
-    origin: "*", // Replace with the frontend's URL (React app)
-    methods: "GET,POST,PUT,DELETE,PATCH", // Allowed methods
-    // credentials : true
+    origin: "https://userdashboard-theta.vercel.app", // Frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    credentials: true, // Allow cookies if needed
   })
 );
 
