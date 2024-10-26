@@ -4,19 +4,19 @@ import cors from "cors"
 // *********** All-Routes *************
 import auth from "./routes/auth.routes.js";
 import user from "./routes/user.routes.js";
-// *********** All-Routes *************
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 dotenv.config();
-
+// *********** All-Routes *************
 
 import cookieParser from "cookie-parser";
 const app = express();
+// Use cors middleware
 
 app.use(
   cors({
-    origin:'*', 
-    credentials:true,            
-    optionSuccessStatus:200,
+    origin: "*", // Replace with the frontend's URL (React app)
+    methods: "GET,POST,PUT,DELETE,PATCH", // Allowed methods
+    credentials : true
   })
 );
 
