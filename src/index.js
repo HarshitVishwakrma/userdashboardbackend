@@ -14,7 +14,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://userdashboard-inm0hbjzm-harshits-projects-548ba978.vercel.app", // Replace with the frontend's URL (React app)
+    origin: "https://userdashboard-theta.vercel.app", // Replace with the frontend's URL (React app)
     methods: "GET,POST,PUT,DELETE,PATCH", // Allowed methods
     credentials : true
   })
