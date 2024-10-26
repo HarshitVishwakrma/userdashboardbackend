@@ -16,8 +16,9 @@ app.use(cors());
 
 app.use(
   cors({
-    origin: "*", // Replace with the frontend's URL (React app)
-    methods: "GET,POST,PUT,DELETE,PATCH", // Allowed methods
+    origin:'*', 
+    credentials:true,            
+    optionSuccessStatus:200,
   })
 );
 
