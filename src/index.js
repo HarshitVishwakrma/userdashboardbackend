@@ -21,12 +21,22 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(
+  cors({
+    origin: "https://userdashboard-theta.vercel.app", // Frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    credentials: true, // Allow cookies and credentials
+    allowedHeaders: ["Content-Type", "Authorization"], // Allow required headers
+  })
+);
+
+
 // Handle Preflight Requests (OPTIONS)
 app.options('*', (req, res) => {
   res.status(204).send(); // Respond with No Content
 });
 
-app.use(cors())
+
 
 
 
