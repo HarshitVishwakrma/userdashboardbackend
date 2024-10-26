@@ -5,6 +5,9 @@ import cors from "cors"
 import auth from "./routes/auth.routes.js";
 import user from "./routes/user.routes.js";
 // *********** All-Routes *************
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 import cookieParser from "cookie-parser";
 const app = express();
