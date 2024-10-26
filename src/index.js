@@ -11,8 +11,6 @@ dotenv.config();
 
 import cookieParser from "cookie-parser";
 const app = express();
-// Use cors middleware
-app.use(cors({ origin: '*' }));
 
 app.use(
   cors({
