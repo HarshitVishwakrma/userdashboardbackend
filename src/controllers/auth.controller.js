@@ -59,7 +59,6 @@ export const Login = async (req, res) => {
         .json({ success: false, message: "Please enter a valid password" });
     }
 
-    Adding token
     const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY, {
       expiresIn: "1d",
     });
