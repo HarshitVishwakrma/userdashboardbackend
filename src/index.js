@@ -13,19 +13,10 @@ const app = express();
 // Use cors middleware
 
 
-app.use(
-  cors({
-    origin: "*", // Frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    credentials: false, // Allow cookies and credentials
-    allowedHeaders: ["Content-Type", "Authorization"], // Allow required headers
-  })
-);
+app.use(cors());
 
 // Handle Preflight Requests (OPTIONS)
 app.options('*', cors());
-
-
 
 
 //middle wares
