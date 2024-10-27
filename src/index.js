@@ -13,7 +13,11 @@ const app = express();
 // Use cors middleware
 
 
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
+}));
 
 // Handle Preflight Requests (OPTIONS)
 app.options('*', cors());
