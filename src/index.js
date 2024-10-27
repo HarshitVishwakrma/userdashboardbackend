@@ -14,13 +14,11 @@ const app = express();
 
 
 app.use(cors({
-  origin: '*',
+  origin: 'https://userdashboard-theta.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
 }));
 
-// Handle Preflight Requests (OPTIONS)
-app.options('*', cors());
 
 
 //middle wares
