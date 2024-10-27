@@ -3,6 +3,7 @@ import { format, isValid } from "date-fns"; // For date formatting and validatio
 import ClaimHistory from "../models/claimsHistory.model.js";
 export const getAllUser = async (req, res) => {
   try {
+     res.setHeader('Access-Control-Allow-Origin', 'https://userdashboard-theta.vercel.app/'); 
     const allUsers = await User.find();
     res.status(200).json({
       success: true,
