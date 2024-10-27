@@ -13,7 +13,7 @@ const app = express();
 // Use cors middleware
 
 
-const allowedOrigin = 'https://your-frontend-project.vercel.app';
+const allowedOrigin = 'https://userdashboard-theta.vercel.app/';
 
 // Middleware to set CORS headers manually
 app.use((req, res, next) => {
