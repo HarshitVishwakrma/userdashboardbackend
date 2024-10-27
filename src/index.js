@@ -13,11 +13,21 @@ const app = express();
 // Use cors middleware
 
 
-app.use(cors({
-  origin: 'https://userdashboard-theta.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
-}));
+const allowedOrigin = 'https://your-frontend-project.vercel.app';
+
+// Middleware to set CORS headers manually
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');  // If credentials (cookies, tokens) are needed
+  next();
+});
+
+// Handle preflight requests (OPTIONS)
+app.options('*', (req, res) => {
+  res.sendStatus(204);  // No Content
+});
 
 
 
